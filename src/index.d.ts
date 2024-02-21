@@ -61,3 +61,10 @@ type wallet = {
     desktop: desktop
 }
 export declare function walletBase (b: wallet[]): void
+
+export * from "./web3modal/ethers5/dist/types/exports/index";
+export * from "./web3modal/ethers5/dist/types/exports/react";
+export * from "./web3modal/ethers5/dist/types/exports/vue";
+export * from "./web3modal/ethers5/dist/types/src/client";
+export * from "./web3modal/ethers5/dist/types/src/utils/defaultConfig";
+export * from "./web3modal/scaffold/dist/types/index";
