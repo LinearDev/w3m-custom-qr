@@ -1,6 +1,6 @@
 {
   "name": "w3m-custom-qr",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -11,14 +11,14 @@
       "default": "./src/index.js"
     },
     "./react": {
-      "types": "./web3modal/ethers5/dist/types/exports/react.d.ts",
-      "import": "./web3modal/ethers5/dist/esm/exports/react.js",
-      "default": "./web3modal/ethers5/dist/esm/exports/react.js"
+      "types": "./src/web3modal/ethers5/dist/types/exports/react.d.ts",
+      "import": "./src/web3modal/ethers5/dist/esm/exports/react.js",
+      "default": "./src/web3modal/ethers5/dist/esm/exports/react.js"
     },
     "./vue": {
-      "types": "./web3modal/ethers5/dist/types/exports/vue.d.ts",
-      "import": "./web3modal/ethers5/dist/esm/exports/vue.js",
-      "default": "./web3modal/ethers5/dist/esm/exports/vue.js"
+      "types": "./src/web3modal/ethers5/dist/types/exports/vue.d.ts",
+      "import": "./src/web3modal/ethers5/dist/esm/exports/vue.js",
+      "default": "./src/web3modal/ethers5/dist/esm/exports/vue.js"
     }
   },
   "scripts": {

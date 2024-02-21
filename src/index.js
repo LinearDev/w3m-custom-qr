@@ -89,4 +89,3 @@ export * from "./web3modal/ethers5/dist/esm/exports/react";
 export * from "./web3modal/ethers5/dist/esm/exports/vue";
 export * from "./web3modal/ethers5/dist/esm/src/client";
 export * from "./web3modal/ethers5/dist/esm/src/utils/defaultConfig";
-export * from "./web3modal/scaffold/dist/esm/index";

@@ -1,5 +1,40 @@
 # W3M Custom QR
 
+### Usage
+
+```js
+import {createWeb3Modal, defaultConfig} from "w3m-custom-qr";
+import "w3m-custom-qr/web3modal/ethers5/react";
+
+export const w3m_nets = [
+  {
+    chainId: 56,
+    name: 'BSC mainnet',
+    currency: 'BNB',
+    explorerUrl: 'https://bscscan.com/',
+    rpcUrl: 'https://bsc-dataseed1.binance.org/'
+  },
+  {
+    chainId: 97,
+    name: 'BSC testnet',
+    currency: 'tBNB',
+    explorerUrl: 'https://testnet.bscscan.com/',
+    rpcUrl: 'https://data-seed-prebsc-1-s1.binance.org:8545/'
+  },
+];
+
+createWeb3Modal({
+  ethersConfig: defaultConfig({metadata: {
+    name: 'test',
+    description: 'test',
+    url: 'https://example.com/',
+    icons: ['https://example.com/icons/logo.png']
+  }}),
+  chains: w3m_nets,
+  projectId: YOUR_PROJ_ID
+})
+```
+
 ### mobileBase
 
 ```js
