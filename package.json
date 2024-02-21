@@ -1,6 +1,6 @@
 {
   "name": "w3m-custom-qr",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -9,6 +9,11 @@
       "types": "./src/index.d.ts",
       "import": "./src/index.js",
       "default": "./src/index.js"
+    },
+    "./ethers5": {
+      "types": "./src/web3modal/ethers5/dist/types/exports/index.d.ts",
+      "import": "./src/web3modal/ethers5/dist/esm/exports/index",
+      "default": "./src/web3modal/ethers5/dist/esm/exports/index"
     },
     "./react": {
       "types": "./src/web3modal/ethers5/dist/types/exports/react.d.ts",
