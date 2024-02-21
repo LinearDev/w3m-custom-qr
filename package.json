@@ -1,6 +1,6 @@
 {
   "name": "w3m-custom-qr",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
@@ -34,6 +34,8 @@
     "@walletconnect/ethereum-provider": "^2.11.1",
     "@web3modal/core": "^4.0.6",
     "@web3modal/scaffold-utils": "^4.0.6",
+    "@web3modal/scaffold-react": "^4.0.6",
+    "@web3modal/scaffold-vue": "^4.0.6",
     "@web3modal/ui": "^4.0.6",
     "ethers": "^5.0.0",
     "lit": "^3.1.2"
