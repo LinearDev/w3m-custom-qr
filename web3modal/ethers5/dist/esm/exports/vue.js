@@ -1,5 +1,5 @@
 import { Web3Modal } from '../src/client.js';
-import { ConstantsUtil } from '@web3modal/scaffold-utils';
+import { ConstantsUtil } from '../../../../scaffold-utils/dist/esm/exports/index.js';
 import { getWeb3Modal } from '@web3modal/scaffold-vue';
 import { onUnmounted, ref } from 'vue';
 let modal = undefined;
@@ -85,4 +85,3 @@ export function useWeb3ModalError() {
 }
 export { useWeb3ModalTheme, useWeb3Modal, useWeb3ModalState, useWeb3ModalEvents } from '@web3modal/scaffold-vue';
 export { defaultConfig } from '../src/utils/defaultConfig.js';
-//# sourceMappingURL=vue.js.map

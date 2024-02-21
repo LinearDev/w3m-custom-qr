@@ -138,7 +138,7 @@ let W3mConnectView = class W3mConnectView extends LitElement {
 
       return html `
         <wui-list-wallet
-          imageSrc=${wallet.img}
+          imageSrc=${wallet.img || wallet.imageUrl}
           name=${wallet.name ?? 'Unknown'}
           @click=${onConnection}
         >

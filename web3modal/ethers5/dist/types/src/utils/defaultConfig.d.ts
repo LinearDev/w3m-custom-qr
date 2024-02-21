@@ -1,5 +1,5 @@
 import '@web3modal/polyfills';
-import type { Metadata, ProviderType } from '@web3modal/scaffold-utils/ethers';
+import type { Metadata, ProviderType } from '../../../../../scaffold-utils/dist/types/exports/ethers';
 export interface ConfigOptions {
     enableEIP6963?: boolean;
     enableInjected?: boolean;

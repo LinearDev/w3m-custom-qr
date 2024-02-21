@@ -1,7 +1,7 @@
-import type { LibraryOptions, PublicStateControllerState, Token } from '@web3modal/scaffold';
-import { Web3ModalScaffold } from '@web3modal/scaffold';
+import type { LibraryOptions, PublicStateControllerState, Token } from '../../../../scaffold/dist/types/index';
+import { Web3ModalScaffold } from '../../../../scaffold/dist/types/src/client';
 import type { Web3ModalSIWEClient } from '@web3modal/siwe';
-import type { ProviderType, Chain, Provider, EthersStoreUtilState } from '@web3modal/scaffold-utils/ethers';
+import type { ProviderType, Chain, Provider, EthersStoreUtilState } from '../../../../scaffold-utils/dist/types/exports/ethers';
 export interface Web3ModalClientOptions extends Omit<LibraryOptions, 'defaultChain' | 'tokens'> {
     ethersConfig: ProviderType;
     siweConfig?: Web3ModalSIWEClient;
@@ -40,7 +40,7 @@ export declare class Web3Modal extends Web3ModalScaffold {
     getError(): unknown;
     getChainId(): number | undefined;
     getIsConnected(): boolean;
-    getWalletProvider(): Provider | import("@web3modal/scaffold-utils/ethers").CombinedProvider | undefined;
+    getWalletProvider(): Provider | import("../../../../scaffold-utils/dist/types/exports/ethers").CombinedProvider | undefined;
     getWalletProviderType(): "walletConnect" | "injected" | "coinbaseWallet" | "eip6963" | "w3mEmail" | undefined;
     subscribeProvider(callback: (newState: EthersStoreUtilState) => void): () => void;
     disconnect(): Promise<void>;

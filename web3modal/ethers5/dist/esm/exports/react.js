@@ -1,7 +1,7 @@
 'use client';
 import { Web3Modal } from '../src/client.js';
-import { ConstantsUtil } from '@web3modal/scaffold-utils';
-import { EthersStoreUtil } from '@web3modal/scaffold-utils/ethers';
+import { ConstantsUtil } from '../../../../scaffold-utils/dist/esm/exports/index.js';
+import { EthersStoreUtil } from '../../../../scaffold-utils/dist/esm/exports/ethers.js';
 import { getWeb3Modal } from '@web3modal/scaffold-react';
 import { useSnapshot } from 'valtio';
 import { ethers } from 'ethers';
@@ -57,4 +57,3 @@ export function useWeb3ModalError() {
 }
 export { useWeb3ModalTheme, useWeb3Modal, useWeb3ModalState, useWeb3ModalEvents } from '@web3modal/scaffold-react';
 export { defaultConfig } from '../src/utils/defaultConfig.js';
-//# sourceMappingURL=react.js.map

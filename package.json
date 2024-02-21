@@ -1,29 +1,29 @@
 {
   "name": "w3m-custom-qr",
-  "version": "0.0.6",
+  "version": "0.1.1",
   "type": "module",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.d.ts",
-      "import": "./src/index.js",
-      "default": "./src/index.js"
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
     },
     "./ethers5": {
-      "types": "./src/web3modal/ethers5/dist/types/exports/index.d.ts",
-      "import": "./src/web3modal/ethers5/dist/esm/exports/index",
-      "default": "./src/web3modal/ethers5/dist/esm/exports/index"
+      "types": "./ethers5.d.ts",
+      "import": "./ethers5.js",
+      "default": "./ethers5.js"
     },
     "./react": {
-      "types": "./src/web3modal/ethers5/dist/types/exports/react.d.ts",
-      "import": "./src/web3modal/ethers5/dist/esm/exports/react.js",
-      "default": "./src/web3modal/ethers5/dist/esm/exports/react.js"
+      "types": "./react.d.ts",
+      "import": "./react.js",
+      "default": "./react.js"
     },
     "./vue": {
-      "types": "./src/web3modal/ethers5/dist/types/exports/vue.d.ts",
-      "import": "./src/web3modal/ethers5/dist/esm/exports/vue.js",
-      "default": "./src/web3modal/ethers5/dist/esm/exports/vue.js"
+      "types": "./vue.d.ts",
+      "import": "./vue.js",
+      "default": "./vue.js"
     }
   },
   "scripts": {
@@ -35,10 +35,8 @@
   },
   "dependencies": {
     "@coinbase/wallet-sdk": "^3.7.2",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@walletconnect/ethereum-provider": "^2.11.1",
     "@web3modal/core": "^4.0.6",
-    "@web3modal/scaffold-utils": "^4.0.6",
     "@web3modal/scaffold-react": "^4.0.6",
     "@web3modal/scaffold-vue": "^4.0.6",
     "@web3modal/ui": "^4.0.6",
