@@ -48,6 +48,8 @@ let W3mAccountView = class W3mAccountView extends LitElement {
             throw new Error('w3m-account-view: No account provided');
         }
         const networkImage = AssetUtil.getNetworkImage(this.network);
+        const customImage = globalThis.networks[this.network?.id || ""]
+
         return html `
       <wui-flex
         flexDirection="column"
@@ -95,10 +97,10 @@ let W3mAccountView = class W3mAccountView extends LitElement {
         ${this.emailCardTemplate()} ${this.emailBtnTemplate()}
 
         <wui-list-item
-          .variant=${networkImage ? 'image' : 'icon'}
+          .variant=${customImage || networkImage ? 'image' : 'icon'}
           iconVariant="overlay"
           icon="networkPlaceholder"
-          imageSrc=${ifDefined(networkImage)}
+          imageSrc=${customImage ? customImage : ifDefined(networkImage)}
           ?chevron=${this.isAllowedNetworkSwitch()}
           @click=${this.onNetworks.bind(this)}
           data-testid="w3m-account-select-network"

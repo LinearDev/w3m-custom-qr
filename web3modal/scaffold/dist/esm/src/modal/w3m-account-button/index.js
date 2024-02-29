@@ -50,6 +50,7 @@ let W3mAccountButton = class W3mAccountButton extends LitElement {
     }
     render() {
         const networkImage = AssetUtil.getNetworkImage(this.network);
+        const customImage = globalThis.networks[this.network?.id || ""];
         const showBalance = this.balance === 'show';
         return html `
       <wui-account-button
@@ -57,7 +58,7 @@ let W3mAccountButton = class W3mAccountButton extends LitElement {
         .isUnsupportedChain=${this.isUnsupportedChain}
         address=${ifDefined(this.profileName ?? this.address)}
         ?isProfileName=${Boolean(this.profileName)}
-        networkSrc=${ifDefined(networkImage)}
+        networkSrc=${customImage ? customImage : ifDefined(networkImage)}
         avatarSrc=${ifDefined(this.profileImage)}
         balance=${showBalance
             ? CoreHelperUtil.formatBalance(this.balanceVal, this.balanceSymbol)

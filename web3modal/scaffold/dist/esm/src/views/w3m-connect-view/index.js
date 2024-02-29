@@ -32,26 +32,16 @@ let W3mConnectView = class W3mConnectView extends LitElement {
 
         ${globalThis.isWalletConnect ? this.walletConnectConnectorTemplate() : null}
         ${globalThis.isInjected ? this.announcedTemplate() : null}
+        ${globalThis.isRecent ? this.recentTemplate() : null}
         ${connectors.map((entry) => {
           return this.customButton(CoreHelperUtil.isMobile() ? entry.mobile : entry.desktop)
         })}
+
+        ${globalThis.isAllWallets ? this.allWalletsTemplate() : null}
         
       </wui-flex>
       <w3m-legal-footer></w3m-legal-footer>
     `;
-    
-    /**
-     * 
-     * ${this.customButton({
-          name: "Ebav Kozy",
-          img: ""
-        })}
-        ${this.customButton({
-          name: "BB the dummer",
-          img: ""
-        })}
-     */
-
     /**
      * recomended list (metamask and trust wallet)
      * 

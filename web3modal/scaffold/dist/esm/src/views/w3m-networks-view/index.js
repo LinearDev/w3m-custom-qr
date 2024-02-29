@@ -46,10 +46,21 @@ let W3mNetworksView = class W3mNetworksView extends LitElement {
     networksTemplate() {
         const { approvedCaipNetworkIds, requestedCaipNetworks, supportsAllNetworks } = NetworkController.state;
         const sortedNetworks = CoreHelperUtil.sortRequestedNetworks(approvedCaipNetworkIds, requestedCaipNetworks);
-        return sortedNetworks?.map(network => html `
+        
+        const customized = sortedNetworks?.map(entry => {
+          if (globalThis.networks[entry.id]) {
+            entry.imageUrl = globalThis.networks[entry.id]
+            entry.isCustomized = true;
+            return entry;
+          }
+
+          return entry;
+        })
+
+        return customized?.map(network => html `
         <wui-card-select
           .selected=${this.caipNetwork?.id === network.id}
-          imageSrc=${ifDefined(AssetUtil.getNetworkImage(network))}
+          imageSrc=${network.isCustomized ? network.imageUrl : ifDefined(AssetUtil.getNetworkImage(network))}
           type="network"
           name=${network.name ?? network.id}
           @click=${() => this.onSwitchNetwork(network)}

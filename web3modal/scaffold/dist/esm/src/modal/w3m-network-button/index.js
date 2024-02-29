@@ -30,11 +30,13 @@ let W3mNetworkButton = class W3mNetworkButton extends LitElement {
         this.unsubscribe.forEach(unsubscribe => unsubscribe());
     }
     render() {
+        const img = globalThis?.networks[this.network?.id];
+
         return html `
       <wui-network-button
         .disabled=${Boolean(this.disabled || this.loading)}
         .isUnsupportedChain=${this.isUnsupportedChain}
-        imageSrc=${ifDefined(AssetUtil.getNetworkImage(this.network))}
+        imageSrc=${img ? img : ifDefined(AssetUtil.getNetworkImage(this.network))}
         @click=${this.onClick.bind(this)}
       >
         ${this.isUnsupportedChain

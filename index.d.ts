@@ -61,3 +61,13 @@ type wallet = {
     desktop: desktop
 }
 export declare function walletBase (b: wallet[]): void
+
+export declare function setInjected (bool: boolean): void
+
+export declare function setWalletConnect (bool: boolean): void
+
+export declare function setAllWallets (bool: boolean): void
+
+export declare function setRecentWallets (bool: boolean): void
+
+export declare function setCustomImage ({ id, imageUrl }: {id: string, imageUrl: string}): void

@@ -1,6 +1,6 @@
 {
   "name": "w3m-custom-qr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -37,10 +37,11 @@
     "@coinbase/wallet-sdk": "^3.7.2",
     "@walletconnect/ethereum-provider": "^2.11.1",
     "@web3modal/core": "^4.0.6",
+    "@web3modal/polyfills": "^4.0.11",
     "@web3modal/scaffold-react": "^4.0.6",
     "@web3modal/scaffold-vue": "^4.0.6",
     "@web3modal/ui": "^4.0.6",
-    "ethers": "^5.0.0",
+    "ethers": ">=5.0.0 <6.0.0",
     "lit": "^3.1.2"
   },
   "peerDependencies": {

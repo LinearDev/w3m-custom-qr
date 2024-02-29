@@ -1,6 +1,9 @@
 
 globalThis.isInjected = true;
 globalThis.isWalletConnect = true;
+globalThis.isAllWallets = false;
+globalThis.isRecent = false;
+globalThis.networks = {};
 
 const injectedBase = (ids) => {
     return ids.map((id) => {return {
@@ -71,6 +74,18 @@ export const setInjected = (bool) => {
 
 export const setWalletConnect = (bool) => {
     globalThis.isWalletConnect = bool
+}
+
+export const setAllWallets = (bool) => {
+    globalThis.isAllWallets = bool
+}
+
+export const setRecentWallets = (bool) => {
+    globalThis.isRecent = bool
+}
+
+export const setCustomImage = ({ id, imageUrl }) => {
+    globalThis.networks[id] = imageUrl;
 }
 
 /**
